@@ -17,3 +17,11 @@
 .reviews-section .section-heading h1{font-family:var(--serif);font-size:clamp(40px,5vw,60px);line-height:1.04;letter-spacing:-1.4px;font-weight:500;margin:0}
 .reviews-section .section-heading h1 em{color:var(--forest);font-weight:500}
 @media(max-width:760px){.reviews-hero{height:clamp(180px,56.25vw,280px)}}
+
+.tour-choice-nav{max-width:900px;margin:42px auto 0;padding:26px 0;border-top:1px solid #dcd9cf;border-bottom:1px solid #dcd9cf}
+.tour-choice-nav>.eyebrow{margin-bottom:14px}
+.tour-choice-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tour-choice-links a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;background:#fff;border-left:3px solid var(--green);color:var(--forest);font-size:12px;font-weight:700}
+.tour-choice-links a span{flex:none;color:#70776f;font-size:10px;font-weight:500}
+.tour-choice-links a[aria-current=page]{background:#ede6d8;border-left-color:var(--gold)}
+@media(max-width:760px){.tour-choice-links{grid-template-columns:1fr}}
