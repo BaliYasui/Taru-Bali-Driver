@@ -10,12 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .batur-image-slider{position:relative;width:min(100%,320px);aspect-ratio:4/3;margin-top:18px;overflow:hidden;background:#e4e1d8}
+    .batur-image-slider img{display:none;width:100%;height:100%;object-fit:cover;margin:0}
+    .batur-image-slider img.is-active{display:block}
+    .batur-slider-arrow{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:50%;background:#164b38d9;color:#fff;font-size:23px;line-height:1;cursor:pointer}
+    .batur-slider-arrow:hover{background:#164b38}
+    .batur-slider-arrow:focus-visible,.batur-slider-dot:focus-visible{outline:2px solid #e8b83f;outline-offset:3px}
+    .batur-slider-prev{left:10px}.batur-slider-next{right:10px}
+    .batur-slider-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:8px}
+    .batur-slider-dot{width:9px;height:9px;padding:0;border:1px solid #fff;border-radius:50%;background:#ffffff80;cursor:pointer}
+    .batur-slider-dot[aria-current="true"]{background:#e8b83f;border-color:#e8b83f}
+  </style>
 </head>
 <body class="tour-detail-page mount-batur-page">
   <header class="site-header scrolled detail-header">
     <a class="brand" href="index.html#top" aria-label="Bali Tana Tour home">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="36" cy="10" r="4.5" fill="#e8b83f"/><path d="M24 4 20.5 10h7L24 4Zm-8 8h16l3 4H13l3-4Zm-5 7h26l3 5H8l3-5Zm-4 8h34l3 5H4l3-5Zm5 7h24v9H12z" fill="currentColor"/><path d="M19 34h10v9H19z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 44h42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-      <span class="brand-name">Bali Tana <span>Tour</span></span>
+      <span class="brand-name">Taru Bali <span>Driver</span></span>
     </a>
     <a class="detail-back" href="index.html#tours">← All Bali tours</a>
   </header>
@@ -74,15 +86,21 @@
           </article>
           <article class="itinerary-stop">
             <span class="itinerary-number">03</span>
-            <div><span class="eyebrow">Optional · Hot spring</span><h3>Hot Spring Experience</h3><p>If you would like, enjoy a relaxing soak at a hot spring in the volcanic area, with beautiful views of the surrounding landscape.</p><img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=900&q=85" alt="Scenic natural landscape in Bali" loading="lazy" decoding="async"></div>
+            <div><span class="eyebrow">Optional · Hot spring</span><h3>Natural Hot Spring</h3><p>If you would like, enjoy a relaxing soak at a hot spring in the volcanic area, with beautiful views of the surrounding landscape.</p><img src="https://travels.id/wp-content/uploads/2024/08/Batur-Natural-Hot-Spring-Kintamani-Bali.webp" alt="Natural hot spring in Kintamani, Bali" loading="lazy" decoding="async"></div>
           </article>
           <article class="itinerary-stop">
             <span class="itinerary-number">04</span>
-            <div><span class="eyebrow">Local flavors · Kintamani</span><h3>Coffee Plantation</h3><p>On the way back toward your hotel, stop at a coffee plantation or Luwak coffee experience. Kintamani is well known for its coffee-growing areas.</p><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=85" alt="Coffee beans at a plantation" loading="lazy" decoding="async"></div>
+            <div><span class="eyebrow">Local flavors · Kintamani</span><h3>Coffee Plantation</h3><p>On the way back toward your hotel, stop at a coffee plantation or Luwak coffee experience. Kintamani is well known for its coffee-growing areas.</p><img src="https://bagustourservice.com/wp-content/uploads/2018/05/BALI-LUWAK-COFFEE.jpg.webp" alt="Luwak coffee in Bali" loading="lazy" decoding="async"></div>
           </article>
           <article class="itinerary-stop">
             <span class="itinerary-number">05</span>
-            <div><span class="eyebrow">Choose your final stop</span><h3>Tirta Empul Temple or a Waterfall</h3><p>To finish the day on your return toward the hotel, choose either Tirta Empul Temple or a waterfall, according to your interests.</p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMmYnZtDEoNLgk_vPLuk2v8UcI2WcMlhbbHf3YNdqKgbpTFxGXEGTwJ7gsBXIAjCjfL5LJ8RZ78tNeqlAfyC6bOlBqI9w4vY7iy3a1CDi2PQ9mybcLiULd9Rt75H7EGjSWMEujbGLVMUhzn8pxqGgAll0RfMAx3BQPaHhC6K1xqLbjY36Qe9-VqzOoQkc/s320/13763.jpg" alt="Tirta Empul sacred water temple" loading="lazy" decoding="async"></div>
+            <div><span class="eyebrow">Choose your final stop</span><h3>Tirta Empul Temple or a Waterfall</h3><p>To finish the day on your return toward the hotel, choose either Tirta Empul Temple or a waterfall, according to your interests.</p><div class="batur-image-slider" aria-label="Temple or waterfall photos" aria-roledescription="carousel">
+              <img class="is-active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMmYnZtDEoNLgk_vPLuk2v8UcI2WcMlhbbHf3YNdqKgbpTFxGXEGTwJ7gsBXIAjCjfL5LJ8RZ78tNeqlAfyC6bOlBqI9w4vY7iy3a1CDi2PQ9mybcLiULd9Rt75H7EGjSWMEujbGLVMUhzn8pxqGgAll0RfMAx3BQPaHhC6K1xqLbjY36Qe9-VqzOoQkc/s320/13763.jpg" alt="Tirta Empul sacred water temple" loading="lazy" decoding="async">
+              <img src="https://atixbali.oss-ap-southeast-5.aliyuncs.com/de6cf710f5a33c515deba55a7e6dbf62.jpeg" alt="Temple or waterfall in Bali" loading="lazy" decoding="async" hidden>
+              <button class="batur-slider-arrow batur-slider-prev" type="button" aria-label="Previous photo">‹</button>
+              <button class="batur-slider-arrow batur-slider-next" type="button" aria-label="Next photo">›</button>
+              <div class="batur-slider-dots" aria-label="Choose a photo"><button class="batur-slider-dot" type="button" aria-label="Show photo 1" aria-current="true"></button><button class="batur-slider-dot" type="button" aria-label="Show photo 2" aria-current="false"></button></div>
+            </div></div>
           </article>
         </div>
         <nav class="tour-choice-nav" aria-label="Choose another Bali tour">
@@ -130,6 +148,53 @@
     }
 
     updateCurrencyEstimates();
+
+    document.querySelectorAll('.batur-image-slider').forEach((slider) => {
+      const slides = [...slider.querySelectorAll('img')];
+      const dots = [...slider.querySelectorAll('.batur-slider-dot')];
+      let current = 0;
+      let autoplay;
+
+      function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('is-active', i === current);
+          slide.hidden = i !== current;
+        });
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === current)));
+      }
+
+      function stopAutoplay() {
+        window.clearInterval(autoplay);
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          autoplay = window.setInterval(() => showSlide(current + 1), 5000);
+        }
+      }
+
+      slider.querySelector('.batur-slider-prev').addEventListener('click', () => {
+        showSlide(current - 1);
+        startAutoplay();
+      });
+      slider.querySelector('.batur-slider-next').addEventListener('click', () => {
+        showSlide(current + 1);
+        startAutoplay();
+      });
+      dots.forEach((dot, i) => dot.addEventListener('click', () => {
+        showSlide(i);
+        startAutoplay();
+      }));
+      slider.addEventListener('mouseenter', stopAutoplay);
+      slider.addEventListener('mouseleave', startAutoplay);
+      slider.addEventListener('focusin', stopAutoplay);
+      slider.addEventListener('focusout', (event) => {
+        if (!slider.contains(event.relatedTarget)) startAutoplay();
+      });
+      startAutoplay();
+    });
 
     if (window.SUPABASE_URL && !window.SUPABASE_URL.includes('YOUR_') && window.SUPABASE_ANON_KEY && !window.SUPABASE_ANON_KEY.includes('YOUR_')) {
       const supabaseClient = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
